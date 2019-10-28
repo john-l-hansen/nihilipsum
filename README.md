@@ -1,6 +1,6 @@
 # :neutral_face: Nihilipsum
 
-Built a lorem ipsum generator that spits out Stranger Things quotes. It's built with Node and Express. You're able to select the number of paragraphs you'd like to generate and there is also a button that allows you to easily copy all the generated text.
+Nihilist-flavored lorem ipsum generator.
 
 ## :running: Running the App Locally
 
