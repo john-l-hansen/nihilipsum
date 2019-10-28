@@ -1,9 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Poppins:400,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
-@import url(https://necolas.github.io/normalize.css/3.0.2/normalize.css);
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap');
 
-/* body {
-  color: #black;
+body {
+  background-color: black;
+  color: white;
   text-align: center;
   margin: 40px auto;
   max-width: 800px;
@@ -11,8 +10,14 @@
   font: 16px 'Open Sans', sans-serif;
 }
 
+h1 {
+  font-size: 3rem;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
 p {
-  font-size: 20px;
+  font-size: 1rem;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 form {
@@ -50,26 +55,6 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-.video-container {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: -1;
-}
-
-.video-background {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translate(-50%, -50%);
-}
-
 .main-content {
   z-index: 10;
 }
@@ -82,7 +67,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .description {
-  font-family: 'Poppins';
+  font-family: 'IBM Plex Mono', monospace;
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
@@ -92,6 +77,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .paragraph-number {
+  color: black;
   max-width: 80px;
   margin: 0;
   margin-right: 10px;
@@ -102,17 +88,18 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .paragraph-number:focus {
-  box-shadow: 0px 0px 50px 5px #f61b1b;
+  box-shadow: 0px 0px 50px 5px white;
 }
 
 .generate-button,
 .copy-button {
-  font-family: 'Poppins', Helvetica, serif;
+  font-family: 'IBM Plex Mono', monospace;
   border-width: 0px;
   padding: 6px 12px;
-  background-color: #f61b1b;
-  color: #fff;
-  transition: background-color 1s, color 1s, box-shadow 1s;
+  background-color: white;
+  color: black;
+  transition: background-color 45ms, color 1s, box-shadow 1s;
+  font-weight: 600;
 }
 
 .generate-button:hover,
@@ -120,8 +107,8 @@ input[type=number]::-webkit-outer-spin-button {
 .generate-button:focus,
 .copy-button:focus {
   background-color: #000;
-  color: #f61b1b;
-  box-shadow: 0px 0px 50px 5px #f61b1b;
+  color: white;
+  box-shadow: 0px 0px 50px 5px white;
   outline: none;
 }
 
@@ -133,10 +120,11 @@ input[type=number]::-webkit-outer-spin-button {
 
 .generated-text {
   padding: 20px;
-  color: #313131;
-  background-color: #fff;
-  box-shadow: #fff 0px 0px 5px 4px;
-  margin-top: 40px;
+  color: white;
+  background-color: black;
+  line-height: 1.4;
+  opacity: .87;
+  margin-top: 6rem;
   margin-bottom: 40px;
 }
 
@@ -176,12 +164,33 @@ input[type=number]::-webkit-outer-spin-button {
 
 #copyText p {
   font-size: 30px;
-  font-family: 'Poppins';
+  font-family: 'IBM Plex Mono', monospace;
   font-weight: bold;
   color: #fff;
-} */
+}
 
+/* Let's make text fade-in and move up a little on load */
 
-.container {
-  
+.logo {
+  animation: TextFade 1.5s .25s forwards cubic-bezier(0.2,0.8, 0.2, 1);
+}
+
+.intro-title {
+  animation: TextFade 2s .25s forwards cubic-bezier(0.2,0.8, 0.2, 1);
+}
+
+.intro-text {
+  animation: TextFade 3s .25s forwards cubic-bezier(0.2,0.8, 0.2, 1);
+  line-height: 1.4;
+}
+
+@keyframes TextFade {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem)
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0)
+  }
 }
