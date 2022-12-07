@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/Engineering-Robert/lorem-ipsum-generator#readme",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.17.3"
   },
   "engines": {
     "node": "8.2.1"
